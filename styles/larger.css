@@ -116,4 +116,14 @@
     text-align: center;
     margin-top: 2rem;
   }
+  .hometown-img {
+  display: block;
+  margin: 0.5rem auto;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  max-width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: cover;
+}
 }
