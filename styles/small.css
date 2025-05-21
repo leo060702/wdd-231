@@ -1,0 +1,25 @@
+/* small.css - Default style for mobile devices */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, nav, main, footer {
+  padding: 1rem;
+}
+
+#nav-links {
+  display: none;
+  flex-direction: column;
+}
+
+#nav-links.open {
+  display: flex;
+}
+
+.course {
+  background: #f4f4f4;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
