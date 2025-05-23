@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Hilltop Caf\u00e9",
+    "address": "1010 Turnbull Canyon Rd, Hacienda Heights, CA",
+    "phone": "(626) 555-1234",
+    "website": "https://hilltopcafe.com",
+    "image": "images/hilltop-cafe.png",
+    "level": 1
+  },
+  {
+    "name": "Sunset Wellness Spa",
+    "address": "1333 Colima Rd, Hacienda Heights, CA",
+    "phone": "(626) 555-2345",
+    "website": "https://sunsetspa.com",
+    "image": "images/sunset-spa.png",
+    "level": 2
+  },
+  {
+    "name": "Green Valley Landscaping",
+    "address": "980 Azusa Ave, Hacienda Heights, CA",
+    "phone": "(626) 555-3456",
+    "website": "https://greenvalleyland.com",
+    "image": "images/green-valley.png",
+    "level": 1
+  },
+  {
+    "name": "Bright Minds Tutoring",
+    "address": "2025 Gale Ave, Hacienda Heights, CA",
+    "phone": "(626) 555-4567",
+    "website": "https://brightmindsedu.com",
+    "image": "images/bright-minds.png",
+    "level": 3
+  },
+  {
+    "name": "Taste of Asia Market",
+    "address": "1450 South Hacienda Blvd, Hacienda Heights, CA",
+    "phone": "(626) 555-5678",
+    "website": "https://tasteofasiahh.com",
+    "image": "images/taste-of-asia.png",
+    "level": 2
+  },
+  {
+    "name": "Elevate Fitness Club",
+    "address": "1101 Gale Ave, Hacienda Heights, CA",
+    "phone": "(626) 555-6789",
+    "website": "https://elevatefitclub.com",
+    "image": "images/elevate-fitness.png",
+    "level": 3
+  },
+  {
+    "name": "Golden Paw Pet Grooming",
+    "address": "800 S Stimson Ave, Hacienda Heights, CA",
+    "phone": "(626) 555-7890",
+    "website": "https://goldenpawgrooming.com",
+    "image": "images/golden-paw.png",
+    "level": 1
+  }
+]
