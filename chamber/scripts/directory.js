@@ -2,56 +2,47 @@ const directory = document.getElementById("directory");
 const gridBtn = document.getElementById("grid");
 const listBtn = document.getElementById("list");
 
-// Fetch and display member data
 async function fetchMembers() {
-  try {
-    const response = await fetch("data/members.json");
-    const members = await response.json();
-    displayMembers(members);
-  } catch (error) {
-    console.error("Error fetching member data:", error);
-  }
+  const response = await fetch("data/members.json");
+  const members = await response.json();
+  displayMembers(members);
 }
 
-// Display members in cards
 function displayMembers(members) {
+  const isListView = directory.classList.contains("list");
   directory.innerHTML = "";
+
   members.forEach(member => {
     const card = document.createElement("section");
     card.classList.add("card");
 
-    // Apply membership level class
-    if (member.level === 3) {
-      card.classList.add("gold");
-    } else if (member.level === 2) {
-      card.classList.add("silver");
+    let html = `<h3>${member.name}</h3>`;
+    if (!isListView) {
+      html += `<img src="${member.image}" alt="${member.name}" width="100">`;
     }
-
-    card.innerHTML = `
-      <h3>${member.name}</h3>
-      <img src="${member.image}" alt="${member.name} logo" />
-      <p><strong>Address:</strong> ${member.address}</p>
-      <p><strong>Phone:</strong> ${member.phone}</p>
+    html += `
+      <p>${member.address}</p>
+      <p>${member.phone}</p>
       <a href="${member.website}" target="_blank">Visit Website</a>
     `;
+    card.innerHTML = html;
     directory.appendChild(card);
   });
 }
 
-// Toggle layout
 gridBtn.addEventListener("click", () => {
   directory.classList.add("grid");
   directory.classList.remove("list");
+  fetchMembers();
 });
 
 listBtn.addEventListener("click", () => {
   directory.classList.add("list");
   directory.classList.remove("grid");
+  fetchMembers();
 });
 
-// Footer: Current year and last modified date
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-// Start
 fetchMembers();
