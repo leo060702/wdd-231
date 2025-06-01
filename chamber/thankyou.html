@@ -7,6 +7,37 @@
   <meta name="author" content="Zhili Zhong" />
   <title>Thank You | Hacienda Heights Chamber</title>
   <link rel="stylesheet" href="styles/directory.css" />
+  <style>
+    .confirmation {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .confirmation p {
+      margin: 0.5em 0;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 
 <body>
@@ -23,11 +54,17 @@
   </header>
 
   <main>
-    <section style="max-width: 700px; margin: 2rem auto; padding: 2rem; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
+    <section class="confirmation">
       <h1>Thank You!</h1>
       <p>We appreciate your interest in joining the Hacienda Heights Chamber of Commerce.</p>
-      <p>Your information has been received. We will be in touch with you shortly.</p>
-      <a href="index.html" class="cta-button" style="display: inline-block; margin-top: 1rem;">Return to Home</a>
+      <h2>Your Submitted Information:</h2>
+      <p><strong>First Name:</strong> <span id="fname"></span></p>
+      <p><strong>Last Name:</strong> <span id="lname"></span></p>
+      <p><strong>Email:</strong> <span id="email"></span></p>
+      <p><strong>Phone:</strong> <span id="phone"></span></p>
+      <p><strong>Business Name:</strong> <span id="organization"></span></p>
+      <p><strong>Submitted At:</strong> <span id="timestamp"></span></p>
+      <a href="index.html" class="cta-button">Return to Home</a>
     </section>
   </main>
 
@@ -37,8 +74,19 @@
   </footer>
 
   <script>
+    // Update year and last modified
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("lastModified").textContent = document.lastModified;
+
+    // Extract form data from URL
+    const params = new URLSearchParams(window.location.search);
+
+    document.getElementById("fname").textContent = params.get("fname") || "N/A";
+    document.getElementById("lname").textContent = params.get("lname") || "N/A";
+    document.getElementById("email").textContent = params.get("email") || "N/A";
+    document.getElementById("phone").textContent = params.get("phone") || "N/A";
+    document.getElementById("organization").textContent = params.get("organization") || "N/A";
+    document.getElementById("timestamp").textContent = params.get("timestamp") || "N/A";
   </script>
 </body>
 </html>
