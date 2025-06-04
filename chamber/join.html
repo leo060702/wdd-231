@@ -159,42 +159,8 @@
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 
-  <script>
-    // Year and Last Modified
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
-
-    // Mobile Menu Toggle
-    const menuToggle = document.querySelector('.mobile-menu');
-    const mobileNav = document.querySelector('nav.mobile');
-
-    menuToggle.addEventListener('click', () => {
-      if (mobileNav.style.display === 'flex') {
-        mobileNav.style.display = 'none';
-      } else {
-        mobileNav.style.display = 'flex';
-      }
-    });
-
-    // Modal for Membership Info
-    const modal = document.getElementById("modal");
-    const btn = document.getElementById("membershipInfo");
-    const span = document.getElementsByClassName("close")[0];
-
-    btn.onclick = function () {
-      modal.style.display = "flex";
-    }
-
-    span.onclick = function () {
-      modal.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
+  <!-- 引用外部JS -->
+  <script src="scripts/join.js"></script>
 </body>
 
 </html>
