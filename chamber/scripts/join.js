@@ -23,3 +23,15 @@ window.onclick = function(event) {
     }
   });
 };
+
+// Mobile Menu Toggle (恢复汉堡菜单功能)
+const menuToggle = document.querySelector('.mobile-menu');
+const mobileNav = document.querySelector('nav.mobile');
+
+menuToggle.addEventListener('click', () => {
+  if (mobileNav.style.display === 'flex') {
+    mobileNav.style.display = 'none';
+  } else {
+    mobileNav.style.display = 'flex';
+  }
+});
