@@ -24,7 +24,7 @@ window.onclick = function(event) {
   });
 };
 
-// Mobile Menu Toggle (恢复汉堡菜单功能)
+// Mobile Menu Toggle
 const menuToggle = document.querySelector('.mobile-menu');
 const mobileNav = document.querySelector('nav.mobile');
 
