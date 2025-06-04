@@ -39,7 +39,6 @@
   </header>
 
   <main>
-    <!-- ✅ 添加 h1，放在 main 最前面 -->
     <h1>Join the Hacienda Heights Chamber</h1>
 
     <!-- Hero Section -->
@@ -50,73 +49,75 @@
       </div>
     </section>
 
-    <section class="form-section">
-      <form action="thankyou.html" method="get">
-        <fieldset>
-          <legend>Applicant Information</legend>
-          <label>First Name:
-            <input type="text" name="fname" required autocomplete="given-name" title="First Name" />
-          </label>
-          <label>Last Name:
-            <input type="text" name="lname" required autocomplete="family-name" title="Last Name" />
-          </label>
-          <label>Title/Position:
-            <input type="text" name="title" pattern="[a-zA-Z\\-\\s]{7,}" required autocomplete="organization-title" title="Your Title or Position" />
-          </label>
-          <label>Email:
-            <input type="email" name="email" required placeholder="you@example.com" autocomplete="email" title="Email Address" />
-          </label>
-          <label>Phone:
-            <input type="tel" name="phone" required pattern="\\d{10}" placeholder="1234567890" autocomplete="tel" title="Phone Number" />
-          </label>
-        </fieldset>
+    <!-- ✅ 新增容器 -->
+    <div class="form-and-cards">
+      <section class="form-section">
+        <form action="thankyou.html" method="get">
+          <fieldset>
+            <legend>Applicant Information</legend>
+            <label>First Name:
+              <input type="text" name="fname" required autocomplete="given-name" title="First Name" />
+            </label>
+            <label>Last Name:
+              <input type="text" name="lname" required autocomplete="family-name" title="Last Name" />
+            </label>
+            <label>Title/Position:
+              <input type="text" name="title" pattern="[a-zA-Z\\-\\s]{7,}" required autocomplete="organization-title" title="Your Title or Position" />
+            </label>
+            <label>Email:
+              <input type="email" name="email" required placeholder="you@example.com" autocomplete="email" title="Email Address" />
+            </label>
+            <label>Phone:
+              <input type="tel" name="phone" required pattern="\\d{10}" placeholder="1234567890" autocomplete="tel" title="Phone Number" />
+            </label>
+          </fieldset>
 
-        <fieldset>
-          <legend>Business Information</legend>
-          <label>Business/Organization Name:
-            <input type="text" name="organization" required autocomplete="organization" title="Organization Name" />
-          </label>
-          <label>Membership Level:</label>
-          <label><input type="radio" name="membership" value="NP" required /> 🕊️ NP Membership (Non-Profit)</label>
-          <label><input type="radio" name="membership" value="Bronze" /> 🥉 Bronze Membership</label>
-          <label><input type="radio" name="membership" value="Silver" /> 🥈 Silver Membership</label>
-          <label><input type="radio" name="membership" value="Gold" /> 🥇 Gold Membership</label>
+          <fieldset>
+            <legend>Business Information</legend>
+            <label>Business/Organization Name:
+              <input type="text" name="organization" required autocomplete="organization" title="Organization Name" />
+            </label>
+            <label>Membership Level:</label>
+            <label><input type="radio" name="membership" value="NP" required /> 🕊️ NP Membership (Non-Profit)</label>
+            <label><input type="radio" name="membership" value="Bronze" /> 🥉 Bronze Membership</label>
+            <label><input type="radio" name="membership" value="Silver" /> 🥈 Silver Membership</label>
+            <label><input type="radio" name="membership" value="Gold" /> 🥇 Gold Membership</label>
 
-          <label>Business Description:
-            <textarea name="description" rows="4" placeholder="Tell us about your business..." title="Business Description"></textarea>
-          </label>
-        </fieldset>
+            <label>Business Description:
+              <textarea name="description" rows="4" placeholder="Tell us about your business..." title="Business Description"></textarea>
+            </label>
+          </fieldset>
 
-        <input type="hidden" name="timestamp" id="timestamp" />
-        <div class="button-container">
-          <button type="submit" aria-label="Submit Membership Application">Join Now</button>
+          <input type="hidden" name="timestamp" id="timestamp" />
+          <div class="button-container">
+            <button type="submit" aria-label="Submit Membership Application">Join Now</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="membership-cards">
+        <div class="card" onclick="openModal('modal-np')">
+          <h3>🕊️ NP Membership</h3>
+          <p>Free for Non-Profits</p>
+          <a href="#">More Info</a>
         </div>
-      </form>
-    </section>
-
-    <!-- Membership Cards -->
-    <section class="membership-cards">
-      <div class="card" onclick="openModal('modal-np')">
-        <h3>🕊️ NP Membership</h3>
-        <p>Free for Non-Profits</p>
-        <a href="#">More Info</a>
-      </div>
-      <div class="card" onclick="openModal('modal-bronze')">
-        <h3>🥉 Bronze Membership</h3>
-        <p>Basic Listing & Events</p>
-        <a href="#">More Info</a>
-      </div>
-      <div class="card" onclick="openModal('modal-silver')">
-        <h3>🥈 Silver Membership</h3>
-        <p>Featured Events & Benefits</p>
-        <a href="#">More Info</a>
-      </div>
-      <div class="card" onclick="openModal('modal-gold')">
-        <h3>🥇 Gold Membership</h3>
-        <p>All Benefits + Premium</p>
-        <a href="#">More Info</a>
-      </div>
-    </section>
+        <div class="card" onclick="openModal('modal-bronze')">
+          <h3>🥉 Bronze Membership</h3>
+          <p>Basic Listing & Events</p>
+          <a href="#">More Info</a>
+        </div>
+        <div class="card" onclick="openModal('modal-silver')">
+          <h3>🥈 Silver Membership</h3>
+          <p>Featured Events & Benefits</p>
+          <a href="#">More Info</a>
+        </div>
+        <div class="card" onclick="openModal('modal-gold')">
+          <h3>🥇 Gold Membership</h3>
+          <p>All Benefits + Premium</p>
+          <a href="#">More Info</a>
+        </div>
+      </section>
+    </div>
 
     <!-- Modals -->
     <div id="modal-np" class="modal">
