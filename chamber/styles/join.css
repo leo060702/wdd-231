@@ -12,6 +12,11 @@ header, footer {
   text-align: center;
 }
 
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -27,10 +32,10 @@ nav a {
 
 /* Hero Section */
 .hero {
-  position: relative;
+  width: 100%;
   text-align: center;
-  color: white;
-  margin-bottom: 2rem;
+  position: relative;
+  margin-top: 2rem;
 }
 
 .hero img {
@@ -49,6 +54,7 @@ nav a {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem 2rem;
   border-radius: 10px;
+  color: #fff;
 }
 
 /* Form */
@@ -174,14 +180,15 @@ button[type="submit"]:hover {
     display: flex;
     gap: 2rem;
     padding: 2rem;
+    align-items: flex-start;
   }
 
   .form-section {
-    flex: 1;
+    flex: 1.2;
   }
 
   .membership-cards {
-    flex: 1;
+    flex: 2;
     flex-direction: column;
     justify-content: flex-start;
   }
