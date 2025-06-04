@@ -170,7 +170,7 @@ button[type="submit"]:hover {
 
 /* Responsive Layout */
 @media (min-width: 768px) {
-  main {
+  .form-and-cards {
     display: flex;
     gap: 2rem;
     padding: 2rem;
