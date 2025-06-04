@@ -51,6 +51,7 @@ nav a {
   border-radius: 10px;
 }
 
+/* Form */
 form {
   max-width: 600px;
   margin: 2rem auto;
@@ -93,7 +94,12 @@ button[type="submit"]:hover {
   background-color: #0055aa;
 }
 
-/* === Membership Cards Section === */
+/* Button Container to center the submit button */
+.button-container {
+  text-align: center;
+}
+
+/* Membership Cards Section */
 .membership-cards {
   display: flex;
   flex-wrap: wrap;
@@ -133,7 +139,7 @@ button[type="submit"]:hover {
   }
 }
 
-/* === Modal Styling === */
+/* Modal Styling */
 .modal {
   display: none;
   position: fixed;
@@ -162,7 +168,7 @@ button[type="submit"]:hover {
   cursor: pointer;
 }
 
-/* === Responsive Layout === */
+/* Responsive Layout */
 @media (min-width: 768px) {
   main {
     display: flex;
@@ -184,11 +190,13 @@ button[type="submit"]:hover {
 /* Mobile Navigation */
 .mobile-menu {
   display: none;
+  font-size: 2rem;
   background: #003366;
   color: white;
-  padding: 1rem;
-  text-align: center;
+  padding: 0.5rem 1rem;
+  text-align: right;
   cursor: pointer;
+  user-select: none;
 }
 
 nav.mobile {
@@ -215,6 +223,7 @@ nav.mobile ul li a.active {
   border-radius: 6px;
 }
 
+/* Show mobile menu on small screens */
 @media (max-width: 768px) {
   nav.desktop {
     display: none;
