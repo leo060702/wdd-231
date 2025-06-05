@@ -1,0 +1,244 @@
+/* === Base Styling === */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #003366;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  color: #fff;
+}
+
+/* Form */
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+label {
+  display: block;
+  margin: 0.75rem 0;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  background-color: #003366;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0055aa;
+}
+
+/* Button Container to center the submit button */
+.button-container {
+  text-align: center;
+}
+
+/* Membership Cards Section */
+.membership-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.card {
+  flex: 1 1 calc(45% - 1rem);
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #003366;
+  text-decoration: underline;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 5%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .form-and-cards {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    align-items: flex-start;
+  }
+
+  .form-section {
+    flex: 1.2;
+  }
+
+  .membership-cards {
+    flex: 2;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+/* Mobile Navigation */
+.mobile-menu {
+  display: none;
+  font-size: 2rem;
+  background: #003366;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: right;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav.mobile {
+  display: none;
+  flex-direction: column;
+  background: #003366;
+}
+
+nav.mobile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav.mobile ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+}
+
+nav.mobile ul li a.active {
+  background-color: #0055aa;
+  border-radius: 6px;
+}
+
+/* Show mobile menu on small screens */
+@media (max-width: 768px) {
+  nav.desktop {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  nav.mobile {
+    display: flex;
+  }
+}
