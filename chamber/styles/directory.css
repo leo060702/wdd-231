@@ -112,3 +112,69 @@
   border-radius: 8px;
   max-width: 800px;
 }
+/* === Discover Page - Navigation Compatibility Fix === */
+
+.desktop ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.desktop li {
+  margin: 0 1rem;
+}
+
+.desktop a {
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-menu {
+  display: none;
+  font-size: 2rem;
+  background: #003366;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: right;
+  cursor: pointer;
+  user-select: none;
+}
+
+nav.mobile {
+  display: none;
+  flex-direction: column;
+  background: #003366;
+}
+
+nav.mobile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav.mobile ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+}
+
+nav.mobile ul li a.active {
+  background-color: #0055aa;
+  border-radius: 6px;
+}
+
+/* Show mobile menu on small screens */
+@media (max-width: 768px) {
+  nav.desktop {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  nav.mobile.open {
+    display: flex;
+  }
+}
