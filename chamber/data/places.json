@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Puente Hills Mall",
+    "address": "1600 S Azusa Ave, Rowland Heights, CA 91748",
+    "description": "The largest shopping and entertainment center in the region, offering a variety of brand stores, cinemas, and dining options.",
+    "image": "images/puentehills.webp"
+  },
+  {
+    "name": "Hsi Lai Temple",
+    "address": "3456 Glenmark Dr, Hacienda Heights, CA 91745",
+    "description": "One of the largest Buddhist temples in North America, providing cultural, educational, and religious activities for visitors.",
+    "image": "images/hsilai.webp"
+  },
+  {
+    "name": "Los Altos High School",
+    "address": "15325 Los Robles Ave, Hacienda Heights, CA 91745",
+    "description": "A highly rated local high school offering balanced academic and athletic programs, valued by many families in the community.",
+    "image": "images/losaltos.webp"
+  },
+  {
+    "name": "Industry Business Park",
+    "address": "City of Industry, CA",
+    "description": "The economic center of the region, home to numerous manufacturing, logistics, and wholesale trade companies, creating thousands of jobs.",
+    "image": "images/industrypark.webp"
+  },
+  {
+    "name": "Hacienda Heights Library",
+    "address": "16010 La Monde St, Hacienda Heights, CA 91745",
+    "description": "The local library offering a wide range of reading materials, youth programs, and community event space.",
+    "image": "images/library.webp"
+  },
+  {
+    "name": "Schabarum Regional Park",
+    "address": "17250 Colima Rd, Rowland Heights, CA 91748",
+    "description": "A popular outdoor park featuring hiking trails, equestrian paths, and large picnic areas for family activities.",
+    "image": "images/schabarum.webp"
+  },
+  {
+    "name": "Metro Gold Line Extension (Planned)",
+    "address": "Hacienda Heights Transit Area",
+    "description": "Future public transit expansion plan to enhance regional accessibility and promote economic development in the community.",
+    "image": "images/metro.webp"
+  },
+  {
+    "name": "Kaiser Permanente Medical Offices",
+    "address": "626 W College St, San Gabriel, CA 91776",
+    "description": "A comprehensive medical facility providing full healthcare services to meet the needs of local residents.",
+    "image": "images/kaiser.webp"
+  }
+]
