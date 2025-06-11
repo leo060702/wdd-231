@@ -178,3 +178,15 @@ nav.mobile ul li a.active {
     display: flex;
   }
 }
+/* === Header & Footer Common Styling (for Discover Page) === */
+header, footer {
+  background-color: #003366;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
