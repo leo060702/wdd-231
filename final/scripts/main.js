@@ -2,9 +2,11 @@
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+}
 
 // Hero Background Video Switching
 const videoElement = document.getElementById('heroVideo');
@@ -33,22 +35,21 @@ function handleSubmit(event) {
 
   if (!name || !email || !message) {
     alert("Please fill in all required fields.");
-    return false;
+    return;
   }
 
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
     alert("Please enter a valid email address.");
-    return false;
+    return;
   }
 
-  // Store form values in localStorage
-  localStorage.setItem("contactName", name);
-  localStorage.setItem("contactSubject", subject);
-  localStorage.setItem("contactMessage", message);
+  // Store form data in sessionStorage for thankyou.html
+  sessionStorage.setItem("formName", name);
+  sessionStorage.setItem("formEmail", email);
+  sessionStorage.setItem("formSubject", subject);
+  sessionStorage.setItem("formMessage", message);
 
   // Redirect to thank you page
   window.location.href = "thankyou.html";
-
-  return false;
 }
