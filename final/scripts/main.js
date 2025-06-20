@@ -30,6 +30,32 @@ document.addEventListener("DOMContentLoaded", () => {
     videoElement.addEventListener('ended', playNextVideo);
     playNextVideo();
   }
+
+  // Load Lodging Options from JSON (for contact.html)
+  const lodgingList = document.getElementById("lodging-list");
+  if (lodgingList) {
+    fetch("data/lodging.json")
+      .then(response => {
+        if (!response.ok) throw new Error("Failed to load lodging data.");
+        return response.json();
+      })
+      .then(data => {
+        data.forEach(item => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+            <strong>${item.name}</strong> (${item.type})<br>
+            <em>${item.location}</em><br>
+            ${item.description}<br>
+            <a href="${item.website}" target="_blank">More info</a>
+          `;
+          lodgingList.appendChild(li);
+        });
+      })
+      .catch(error => {
+        lodgingList.innerHTML = `<li>Unable to load lodging data.</li>`;
+        console.error("lodging.json error:", error);
+      });
+  }
 });
 
 // Contact Form Submit Handler
