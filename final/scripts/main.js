@@ -9,56 +9,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Contact Form Submit Binding
+  // Contact Form Handling
   const form = document.getElementById("contact-form");
   if (form) {
     form.addEventListener("submit", handleSubmit);
   }
 
-  // Hero Background Video Switching
-  const videoElement = document.getElementById('heroVideo');
-  if (videoElement) {
-    const videos = ['videos/scene1.mp4', 'videos/scene2.mp4'];
-    let currentIndex = 0;
+  // Populate thankyou.html if needed
+  if (document.body.classList.contains("thank-you-page")) {
+    const name = sessionStorage.getItem("formName") || "Guest";
+    const subject = sessionStorage.getItem("formSubject") || "(No subject)";
+    const message = sessionStorage.getItem("formMessage") || "(No message)";
 
-    function playNextVideo() {
-      videoElement.src = videos[currentIndex];
-      videoElement.play();
-      currentIndex = (currentIndex + 1) % videos.length;
+    const msgContainer = document.getElementById("user-message");
+    if (msgContainer) {
+      msgContainer.innerHTML = `
+        <strong>Name:</strong> ${name}<br>
+        <strong>Subject:</strong> ${subject}<br>
+        <strong>Message:</strong><br><em>${message.replace(/\n/g, "<br>")}</em>
+      `;
     }
 
-    videoElement.addEventListener('ended', playNextVideo);
-    playNextVideo();
-  }
-
-  // Load Lodging Options from JSON (for contact.html)
-  const lodgingList = document.getElementById("lodging-list");
-  if (lodgingList) {
-    fetch("data/lodging.json")
-      .then(response => {
-        if (!response.ok) throw new Error("Failed to load lodging data.");
-        return response.json();
-      })
-      .then(data => {
-        data.forEach(item => {
-          const li = document.createElement("li");
-          li.innerHTML = `
-            <strong>${item.name}</strong> (${item.type})<br>
-            <em>${item.location}</em><br>
-            ${item.description}<br>
-            <a href="${item.website}" target="_blank">More info</a>
-          `;
-          lodgingList.appendChild(li);
-        });
-      })
-      .catch(error => {
-        lodgingList.innerHTML = `<li>Unable to load lodging data.</li>`;
-        console.error("lodging.json error:", error);
-      });
+    // Optional: clear storage after display
+    sessionStorage.removeItem("formName");
+    sessionStorage.removeItem("formSubject");
+    sessionStorage.removeItem("formMessage");
   }
 });
 
-// Contact Form Submit Handler
+// Form Submission Logic
 function handleSubmit(event) {
   event.preventDefault();
 
@@ -78,12 +57,10 @@ function handleSubmit(event) {
     return;
   }
 
-  // Store form data in sessionStorage for thankyou.html
   sessionStorage.setItem("formName", name);
   sessionStorage.setItem("formEmail", email);
   sessionStorage.setItem("formSubject", subject);
   sessionStorage.setItem("formMessage", message);
 
-  // Redirect to thank you page
   window.location.href = "thankyou.html";
 }
