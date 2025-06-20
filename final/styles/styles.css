@@ -33,9 +33,10 @@ header {
   z-index: 1002;
 }
 
-header h1 {
+.logo {
   font-family: 'Roboto Slab', serif;
   font-size: 1.8rem;
+  font-weight: bold;
 }
 
 nav ul {
@@ -338,6 +339,7 @@ footer {
   margin-bottom: 1rem;
   text-align: left;
 }
+
 /* ===============================
    Accessibility: Visually Hidden
 ================================= */
