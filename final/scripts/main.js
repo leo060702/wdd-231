@@ -35,6 +35,23 @@ document.addEventListener("DOMContentLoaded", () => {
     sessionStorage.removeItem("formSubject");
     sessionStorage.removeItem("formMessage");
   }
+
+  // Hero Video Playlist: scene1.mp4 and scene2.mp4 looping
+  const video = document.getElementById("heroVideo");
+  if (video) {
+    const sources = ["videos/scene1.mp4", "videos/scene2.mp4"];
+    let index = 0;
+
+    function playNext() {
+      video.src = sources[index];
+      video.load();
+      video.play();
+      index = (index + 1) % sources.length;
+    }
+
+    video.addEventListener("ended", playNext);
+    playNext(); // start with first video
+  }
 });
 
 // Form Submission Logic
