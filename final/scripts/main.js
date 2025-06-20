@@ -24,36 +24,31 @@ if (videoElement) {
 
 // Contact Form Submit Handler
 function handleSubmit(event) {
-  event.preventDefault(); // Prevent default form submission
+  event.preventDefault();
 
-  // Get form fields
-  const name = document.getElementById("name");
-  const email = document.getElementById("email");
-  const subject = document.getElementById("subject");
-  const message = document.getElementById("message");
-  const formMessage = document.getElementById("form-message");
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const subject = document.getElementById("subject").value.trim();
+  const message = document.getElementById("message").value.trim();
 
-  // Basic validation
-  if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+  if (!name || !email || !message) {
     alert("Please fill in all required fields.");
     return false;
   }
 
-  // Simple email format validation
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(email.value)) {
+  if (!emailPattern.test(email)) {
     alert("Please enter a valid email address.");
     return false;
   }
 
-  // Show success message
-  formMessage.style.display = "block";
+  // Store form values in localStorage
+  localStorage.setItem("contactName", name);
+  localStorage.setItem("contactSubject", subject);
+  localStorage.setItem("contactMessage", message);
 
-  // Clear form fields
-  name.value = "";
-  email.value = "";
-  subject.value = "";
-  message.value = "";
+  // Redirect to thank you page
+  window.location.href = "thankyou.html";
 
   return false;
 }
