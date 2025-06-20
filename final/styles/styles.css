@@ -327,3 +327,30 @@ footer {
   margin-bottom: 1rem;
   text-align: left;
 }
+/* ===============================
+   Fix: Z-Index for Mobile Menu Overlap
+================================= */
+
+/* Ensure header always appears above hero video */
+header {
+  position: relative;
+  z-index: 1002;
+}
+
+/* Ensure nav dropdown also appears above hero section */
+nav ul {
+  position: absolute;
+  z-index: 1003;
+}
+
+/* Hero section stays behind nav */
+.hero {
+  position: relative;
+  z-index: 0;
+}
+
+/* Video wrapper is always at the very back */
+.hero-video-wrapper {
+  z-index: -1;
+}
+
