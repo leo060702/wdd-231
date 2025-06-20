@@ -34,24 +34,25 @@
         
         <p>Looking for a place to stay? We’ve partnered with trusted providers around Yosemite, including options listed on the official National Park website and Expedia. Whether you're interested in cozy lodges, scenic campgrounds, or family-friendly hotels, we can point you in the right direction. Let us know your travel dates and preferences, and we’ll help you find something that fits your style and budget.</p>
 
-        <form onsubmit="return handleSubmit(event)" class="contact-form">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+<form onsubmit="handleSubmit(event)" class="contact-form">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required />
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required />
 
-          <label for="subject">Subject:</label>
-          <input type="text" id="subject" name="subject" />
+  <label for="subject">Subject:</label>
+  <input type="text" id="subject" name="subject" />
 
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="6" required></textarea>
 
-          <button type="submit" class="cta-button">Send Message</button>
-          <p id="form-message" style="color: green; display: none; margin-top: 1rem;">
-            Thank you for your message! We'll get back to you soon.
-          </p>
-        </form>
+  <button type="submit" class="cta-button">Send Message</button>
+  <p id="form-message" style="color: green; display: none; margin-top: 1rem;">
+    Thank you for your message! We'll get back to you soon.
+  </p>
+</form>
+
       </div>
     </section>
   </main>
