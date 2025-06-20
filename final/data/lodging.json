@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Yosemite Valley Lodge",
+    "type": "Lodge",
+    "location": "Yosemite Village, CA",
+    "description": "Ideal for families and offers views of Yosemite Falls.",
+    "website": "https://www.travelyosemite.com/lodging/yosemite-valley-lodge/"
+  },
+  {
+    "name": "Curry Village",
+    "type": "Cabins / Tent Cabins",
+    "location": "Yosemite Valley",
+    "description": "Rustic cabins and canvas tents, great for budget travelers.",
+    "website": "https://www.travelyosemite.com/lodging/curry-village/"
+  },
+  {
+    "name": "AutoCamp Yosemite",
+    "type": "Luxury Camping",
+    "location": "Midpines, CA",
+    "description": "Stylish Airstreams and luxury tents near Yosemite’s Arch Rock entrance.",
+    "website": "https://autocamp.com/yosemite/"
+  },
+  {
+    "name": "Upper Pines Campground",
+    "type": "Campground",
+    "location": "Yosemite Valley",
+    "description": "Popular campground near trailheads. Book early!",
+    "website": "https://www.nps.gov/yose/planyourvisit/campgrounds.htm"
+  },
+  {
+    "name": "Tenaya at Yosemite",
+    "type": "Hotel / Resort",
+    "location": "Fish Camp, CA",
+    "description": "Full-service resort near the South Entrance. Pool, spa, and dining.",
+    "website": "https://www.tenayalodge.com/"
+  },
+  {
+    "name": "Wawona Hotel",
+    "type": "Historic Hotel",
+    "location": "Wawona, CA",
+    "description": "Charming historic hotel with a relaxing atmosphere.",
+    "website": "https://www.travelyosemite.com/lodging/wawona-hotel/"
+  }
+]
