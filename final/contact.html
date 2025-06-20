@@ -26,10 +26,13 @@
   </header>
 
   <main>
-    <h2>Contact Us</h2>
+    <h2 style="text-align:center; margin: 2rem 0 1rem;">Contact Us</h2>
+    
     <section class="card">
       <div class="card-content">
         <p>If you have any questions about Yosemite, want to suggest a new trail, or just say hello — feel free to reach out! I’d love to hear from you.</p>
+        
+        <p>Looking for a place to stay? We’ve partnered with trusted providers around Yosemite, including options listed on the official National Park website and Expedia. Whether you're interested in cozy lodges, scenic campgrounds, or family-friendly hotels, we can point you in the right direction. Let us know your travel dates and preferences, and we’ll help you find something that fits your style and budget.</p>
 
         <form onsubmit="return handleSubmit(event)" class="contact-form">
           <label for="name">Name:</label>
@@ -62,38 +65,5 @@
   </footer>
 
   <script type="module" src="scripts/main.js"></script>
-
-  <script>
-    function handleSubmit(event) {
-      event.preventDefault();
-
-      const name = document.getElementById("name");
-      const email = document.getElementById("email");
-      const subject = document.getElementById("subject");
-      const message = document.getElementById("message");
-      const formMessage = document.getElementById("form-message");
-
-      if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
-        alert("Please fill in all required fields.");
-        return false;
-      }
-
-      const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
-      if (!emailPattern.test(email.value)) {
-        alert("Please enter a valid email address.");
-        return false;
-      }
-
-      formMessage.style.display = "block";
-
-      name.value = "";
-      email.value = "";
-      subject.value = "";
-      message.value = "";
-
-      return false;
-    }
-  </script>
 </body>
 </html>
-
