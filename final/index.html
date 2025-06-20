@@ -2,16 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comprehensive travel guide to Yosemite National Park, featuring attractions, trails, lodging, and safety tips.">
-    <meta name="author" content="Your Name">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Comprehensive travel guide to Yosemite National Park, featuring attractions, trails, lodging, and safety tips." />
+    <meta name="author" content="Zhili Zhong" />
+    
+    <!-- Social Sharing Metadata -->
+    <meta property="og:title" content="Yosemite Travel Guide" />
+    <meta property="og:description" content="Plan your unforgettable trip to one of America's most iconic national parks." />
+    <meta property="og:image" content="images/og-image.jpg" />
+    <meta property="og:url" content="https://yourusername.github.io/final/index.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <title>Yosemite Travel Guide</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab&family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab&family=Lato&display=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -32,9 +40,14 @@
 
     <main>
         <section class="hero">
-            <h2>Welcome to Yosemite National Park</h2>
-            <p>Plan your unforgettable trip to one of America's most iconic national parks.</p>
-            <a class="cta-button" href="attractions.html">Explore Attractions</a>
+            <div class="hero-video-wrapper">
+                <video id="heroVideo" autoplay muted playsinline></video>
+            </div>
+            <div class="hero-text">
+                <h2>Welcome to Yosemite National Park</h2>
+                <p>Plan your unforgettable trip to one of America's most iconic national parks.</p>
+                <a class="cta-button" href="attractions.html">Explore Attractions</a>
+            </div>
         </section>
 
         <section class="features">
@@ -60,7 +73,10 @@
 
     <footer>
         <p>© 2025 Yosemite Travel Guide. All rights reserved.</p>
-        <p><a href="attributions.html">Attributions</a> | <a href="YOUR_VIDEO_LINK_HERE" target="_blank">Project Demo Video</a></p>
+        <p>
+            <a href="attributions.html">Attributions</a> |
+            <a href="https://www.youtube.com/watch?v=your-demo-video" target="_blank">Project Demo Video</a>
+        </p>
     </footer>
 
     <script type="module" src="scripts/main.js"></script>
