@@ -3,43 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thank You</title>
+  <title>Thank You - Yosemite Travel Guide</title>
   <link rel="stylesheet" href="styles/styles.css" />
-  <style>
-    .thank-you {
-      max-width: 600px;
-      margin: 5rem auto;
-      padding: 2rem;
-      text-align: center;
-      background-color: #f0fff4;
-      border: 1px solid #cce5cc;
-      border-radius: 12px;
-      color: #2e8b57;
-    }
-    .thank-you h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .thank-you a {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
-      background-color: #2e8b57;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-    }
-    .thank-you a:hover {
-      background-color: #228b22;
-    }
-  </style>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <div class="thank-you">
-    <h2>Thank You!</h2>
-    <p>Your message has been sent. We’ll get back to you shortly.</p>
-    <a href="index.html">Return to Home</a>
-  </div>
+
+  <main class="thank-you">
+    <h2>Thank You for Contacting Us!</h2>
+    <p>We’ve received your message and will get back to you shortly. Here’s what you submitted:</p>
+    <p id="user-message"></p>
+    <a href="index.html" class="cta-button">Return to Home</a>
+  </main>
+
+  <script>
+    const name = localStorage.getItem("contactName") || "Guest";
+    const subject = localStorage.getItem("contactSubject") || "(No subject)";
+    const message = localStorage.getItem("contactMessage") || "(No message)";
+
+    document.getElementById("user-message").innerHTML = `
+      <strong>Name:</strong> ${name}<br>
+      <strong>Subject:</strong> ${subject}<br>
+      <strong>Message:</strong><br><em>${message.replace(/\n/g, "<br>")}</em>
+    `;
+
+    // Clear localStorage
+    localStorage.removeItem("contactName");
+    localStorage.removeItem("contactSubject");
+    localStorage.removeItem("contactMessage");
+  </script>
+
 </body>
 </html>
-
