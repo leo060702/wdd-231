@@ -29,6 +29,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 100;
 }
 
 header h1 {
@@ -63,9 +65,11 @@ nav a.active {
   background: none;
   border: none;
   color: #fff;
+  cursor: pointer;
+  z-index: 1100;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   nav ul {
     display: none;
     flex-direction: column;
@@ -73,11 +77,28 @@ nav a.active {
     position: absolute;
     top: 60px;
     right: 0;
-    width: 200px;
+    width: 100%;
+    z-index: 1000;
   }
 
   nav ul.show {
     display: flex;
+  }
+
+  nav ul li {
+    border-bottom: 1px solid #ffffff55;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover {
+    background-color: #3CB371;
   }
 
   #menu-toggle {
@@ -244,7 +265,6 @@ nav a.active {
   object-position: center;
 }
 
-
 /* ===============================
    Footer
 ================================= */
@@ -255,7 +275,10 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
-/* Contact Form */
+
+/* ===============================
+   Contact Form
+================================= */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -278,6 +301,7 @@ footer {
   border-color: #2E8B57;
   box-shadow: 0 0 5px rgba(46, 139, 87, 0.4);
 }
+
 /* ===============================
    Thank You Page Styles
 ================================= */
@@ -303,4 +327,3 @@ footer {
   margin-bottom: 1rem;
   text-align: left;
 }
-
