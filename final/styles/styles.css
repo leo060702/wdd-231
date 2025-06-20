@@ -228,3 +228,20 @@ footer {
   display: block;
   margin-top: 0.5rem;
 }
+.map-section {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.trail-map {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.map-caption {
+  font-style: italic;
+  margin-top: 0.5rem;
+  color: #555;
+}
