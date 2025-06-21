@@ -364,3 +364,13 @@ footer {
   text-decoration: underline !important;
   color: #2E8B57 !important;
 }
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+  transition: text-decoration 0.2s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
