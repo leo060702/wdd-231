@@ -230,6 +230,10 @@ nav a.active {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .card:hover {
   transform: scale(1.02);
@@ -354,4 +358,8 @@ footer {
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
+}
+.card-content a:hover {
+  text-decoration: underline;
+  color: #2E8B57; /* 或你喜欢的绿色 */
 }
