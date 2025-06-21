@@ -230,6 +230,7 @@ nav a.active {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .card:hover {
   transform: scale(1.02);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
@@ -353,17 +354,4 @@ footer {
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
-}
-
-/* ===============================
-   Fix: Card Content <p> Link Style
-================================= */
-.card-content p a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.card-content p a:hover {
-  text-decoration: underline;
-  color: #2E8B57;
 }
