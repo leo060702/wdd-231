@@ -354,6 +354,10 @@ footer {
   white-space: nowrap;
   border: 0;
 }
+.card-content a {
+  text-decoration: none;
+  color: inherit;
+}
 .card-content a:hover {
   text-decoration: underline;
   color: #2E8B57; /* 或你喜欢的绿色 */
