@@ -15,6 +15,30 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", handleSubmit);
   }
 
+  // ✅ Lodging JSON 加载代码开始
+  const lodgingList = document.getElementById("lodging-list");
+  if (lodgingList) {
+    fetch("data/lodging-options.json")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Failed to load lodging data.");
+        }
+        return response.json();
+      })
+      .then(data => {
+        data.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = `${item.name} - ${item.type} - ${item.distance}`;
+          lodgingList.appendChild(li);
+        });
+      })
+      .catch(error => {
+        console.error("Error loading JSON:", error);
+        lodgingList.innerHTML = "<li>Failed to load lodging data.</li>";
+      });
+  }
+  // ✅ Lodging JSON 加载代码结束  
+  
   // Populate thankyou.html if needed
   if (document.body.classList.contains("thank-you-page")) {
     const name = sessionStorage.getItem("formName") || "Guest";
