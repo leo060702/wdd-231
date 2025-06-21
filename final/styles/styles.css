@@ -355,22 +355,15 @@ footer {
   border: 0;
 }
 
-.card-content a {
-  text-decoration: none !important;
-  color: inherit !important;
-}
-
-.card-content a:hover {
-  text-decoration: underline !important;
-  color: #2E8B57 !important;
-}
-
-footer a {
+/* ===============================
+   Fix: Card Content <p> Link Style
+================================= */
+.card-content p a {
   text-decoration: none;
-  color: #fff;
-  transition: text-decoration 0.2s ease;
+  color: inherit;
 }
 
-footer a:hover {
+.card-content p a:hover {
   text-decoration: underline;
+  color: #2E8B57;
 }
