@@ -39,6 +39,12 @@ header {
   font-weight: bold;
 }
 
+.logo h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0; /* 可选：去掉 h1 自带的外边距 */
+}
+
 nav ul {
   list-style: none;
   display: flex;
