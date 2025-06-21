@@ -15,30 +15,34 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", handleSubmit);
   }
 
-  // ✅ Lodging JSON 加载代码开始
-  const lodgingList = document.getElementById("lodging-list");
-  if (lodgingList) {
-    fetch("data/lodging-options.json")
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Failed to load lodging data.");
-        }
-        return response.json();
-      })
-      .then(data => {
-        data.forEach(item => {
-          const li = document.createElement("li");
-          li.textContent = `${item.name} - ${item.type} - ${item.distance}`;
-          lodgingList.appendChild(li);
-        });
-      })
-      .catch(error => {
-        console.error("Error loading JSON:", error);
-        lodgingList.innerHTML = "<li>Failed to load lodging data.</li>";
+// Load Lodging Options from JSON
+const lodgingList = document.getElementById("lodging-list");
+if (lodgingList) {
+  fetch("data/lodging-options.json")
+    .then(response => {
+      if (!response.ok) throw new Error("Network response was not ok.");
+      return response.json();
+    })
+    .then(data => {
+      lodgingList.innerHTML = ""; // 清空旧内容
+      data.forEach(item => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <strong>${item.name}</strong> (${item.type})<br>
+          <em>${item.location}</em><br>
+          ${item.description}<br>
+          <a href="${item.website}" target="_blank">Visit website</a>
+        `;
+        li.style.marginBottom = "1rem"; // 增加每项之间的间距
+        lodgingList.appendChild(li);
       });
-  }
-  // ✅ Lodging JSON 加载代码结束  
-  
+    })
+    .catch(error => {
+      lodgingList.innerHTML = "<li>Failed to load lodging data.</li>";
+      console.error("Error loading JSON:", error);
+    });
+}
+ 
   // Populate thankyou.html if needed
   if (document.body.classList.contains("thank-you-page")) {
     const name = sessionStorage.getItem("formName") || "Guest";
